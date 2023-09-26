@@ -1,11 +1,11 @@
-apiVersion: skaffold/v2
+apiVersion: skaffold/v4beta3
 kind: Config
 manifests:
   rawYaml:
     - ./infra/k8s/*
 build:
   local:
-    push: false
+    push: true
   artifacts:
     - image: agniadvani/client
       context: client
